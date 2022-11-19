@@ -11,7 +11,7 @@ A requirement of time precision raises the question: **is this the right tool fo
 # On-line research
 At https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3 I found an implementation of withLatestFrom operator missing from the Combine framework. My own alternative implementation is < > but It is much shorter, which raises the question: is it oversimplified thus incorect?
 
-# With the goal simplified to just spreading the input evenly there are other ploblems:
+# With the goal simplified to just spreading the input evenly, there are other problems:
 
 ## 1. Lack of current timestamps when using .zip with a Timer publisher:
 This time the goal is simplified to just spreading the input evenly.
