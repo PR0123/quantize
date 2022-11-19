@@ -1,8 +1,8 @@
 # Goal
-To align stream of messages to a given clock ticks
+To align a stream of messages with a given clock ticks
 
 # Use case
-Adjusting imprecize live MIDI keyboard playing to a metronomic beat
+E.g. adjusting imprecize live MIDI keyboard playing to a metronomic beat
 
 # POC
 While simulating countinuous input with asyncAfter, trying Combine's .collect failed because more inprecision was introduced then reduced.
