@@ -16,8 +16,8 @@ How to get rid of events reusing the latest messages while none was published?
 With collect(by time) messages will be spread evenly but not one by one, but in packets. So theoretically every element of such array should be republished.
 
 ## 4. 
-While simulating countinuous input with asyncAfter, trying Combine's .collect introduced unexpected imprecisions.
-It raises the question, is it the right tool for time-sensitive jobs, like quanticizing music from live MIDI input?
+While simulating countinuous input with asyncAfter, trying Combine's .collect introduced unexpected imprecisions. See: unevenBuckets.swift
+It raises the question, if Combine is the right tool for time-sensitive jobs, like quanticizing music from live MIDI input?
 
 # 5. 
 At https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3 I found an implementation of withLatestFrom operator missing from the Combine framework. Is the <link> the simpler but correct implematation of withLatestFrom?
