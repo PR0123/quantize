@@ -2,7 +2,8 @@
 It requires buffering messages when necesery, and ommiting timer ticks in case there were no messages to consume, current or buffered.
 
 <img width="413" alt="shouldBe" src="https://user-images.githubusercontent.com/81814529/204915507-8e15d178-f9a3-4b1a-b2fa-ccb1dc7d2d08.png">
-[Demo](../spreadEvenly.swift)
+
+[Demo](spreadEvenly.swift)
 
 ## Attempts:
 ## 1.
