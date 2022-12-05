@@ -33,7 +33,7 @@ while expected output would give the corect timestamp/clock:
 5 A
 6 B
 7 B
-9 B
+9 B <- most recent clock tick is 9, not 8. The zipped value will be 8, as it was not used yet.
 0 C
 
 Other failed attempts started with
