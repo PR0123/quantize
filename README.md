@@ -1,5 +1,5 @@
 ## How to spread incoming messages evenly, one every second, marking them with most recent timestamps, using Combine.
-It requires __buffering__ messages (A, B, C, ...) when necesery, and __ommiting__ timer ticks (1, 2, 3, ...) in case there were no messages to consume, current or buffered.
+It requires __buffering__ messages (A, ...) when necesery, and __ommiting__ timer ticks (4, ...) in case there were no messages to consume, current or buffered.
 
 <img width="413" alt="shouldBe" src="https://user-images.githubusercontent.com/81814529/204915507-8e15d178-f9a3-4b1a-b2fa-ccb1dc7d2d08.png">
 
