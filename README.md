@@ -9,8 +9,8 @@ I've found an amateur [implementation of withLatestFrom](https://serhiybutz.medi
 
 ## My attempts:
 <img width="410" alt="zip" src="https://user-images.githubusercontent.com/81814529/204915666-1793c358-6fd8-4576-9c04-a849e90181ac.png">
-Zip operator with a timer would by design output old past timestamps, not the latest.
-If timer fire every second and there are messages sent from the second publisher in 3nd and 10th second, it would look like they were sent in 1st and 2nd second. How to overcome the problem with possibly other operator?
+Zip operator with a timer by design outputs old past timestamps, not the latest.
+If timer fire every second and the first two messages were sent in 3nd and 10th second, it would look like they were sent in 1st and 2nd second. How to overcome the problem with possibly other operator?
 
 <img width="408" alt="repeated" src="https://user-images.githubusercontent.com/81814529/204915751-7de29ef1-50fb-4411-abc5-09ecc78f5538.png">
 With  combineLatest the output is sent with every timer event by design, no matter if there was a new message sent from the other publisher. 
