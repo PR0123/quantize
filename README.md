@@ -5,7 +5,7 @@ It requires __buffering__ messages (as B) when necesery, and __ommiting__ timer 
 
 [Demo](spreadEvenly.swift)
 
-I found an amateur [implementation of withLatestFrom](https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3) operator allegedly absent from Combine. I believe it can and should be much simpler, and so [I tried](spreadEvenly.swift)
+I've found an amateur [implementation of withLatestFrom](https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3) operator allegedly absent from Combine. I believe it can and should be much simpler, and so [I tried](spreadEvenly.swift)
 
 ## My attempts:
 <img width="410" alt="zip" src="https://user-images.githubusercontent.com/81814529/204915666-1793c358-6fd8-4576-9c04-a849e90181ac.png">
