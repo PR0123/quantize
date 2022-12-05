@@ -1,13 +1,13 @@
 ## How to spread incoming messages evenly, one every second, marking them with most recent timestamps, using Combine.
-It requires __buffering__ messages when necesery, and __ommiting__ timer ticks in case there were no messages to consume, current or buffered.
+It requires __buffering__ messages (A, B, C, ...) when necesery, and __ommiting__ timer ticks (1, 2, 3, ...) in case there were no messages to consume, current or buffered.
 
 <img width="413" alt="shouldBe" src="https://user-images.githubusercontent.com/81814529/204915507-8e15d178-f9a3-4b1a-b2fa-ccb1dc7d2d08.png">
 
 [Demo](spreadEvenly.swift)
 
-I found an amateur [implementation](https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3) of withLatestFrom operator allegedly missing from the Combine framework. I believe it should be much simpler, and so [I tried](spreadEvenly.swift)
+I found an amateur [implementation of withLatestFrom](https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3) operator allegedly missing from Combine. I believe it can and should be much simpler, and so [I tried](spreadEvenly.swift)
 
-## Attempts:
+## My attempts:
 ## 1.
 <img width="410" alt="zip" src="https://user-images.githubusercontent.com/81814529/204915666-1793c358-6fd8-4576-9c04-a849e90181ac.png">
 Zip operator with a timer would by design output old past timestamps, not the latest.
