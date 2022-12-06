@@ -18,11 +18,11 @@ Filtering repeting messages is not an option, because some messages will be inte
 
 Finally with ```collect(by time)``` messages will be spread evenly but in packets, not one by one. So theoretically every element of a resulting array should be republished, which would add extra complexity.
 
-## Is Combine is the right tool for time-sensitive jobs. If not, what would be an alternative?
-While [simulating](unevenBuckets.swift) countinuous input with asyncAfter, trying Combine's ```.collect``` introduced unexpected imprecisions observed as different number of elements in every "one second aggregate bucket".
-
 ## Is adapting withLatestFrom the right way?
 I've found an [implementation of withLatestFrom](https://github.com/serhiybutz/XCombine#withlatestfrom-operator) allegedly absent from Combine, but I am not sure if adapting it is the best idea. I also believe there must be a simpler way of implementing withLatestFrom. Is there? I albo [experimented](spreadEvenly.swift)
+
+## Is Combine is the right tool for time-sensitive jobs. If not, what would be an alternative?
+While [simulating](unevenBuckets.swift) countinuous input with asyncAfter, trying Combine's ```.collect``` introduced unexpected imprecisions observed as different number of elements in every "one second aggregate bucket".
 
 If this is hopeless than I have [another question](https://developer.apple.com/forums/thread/721262) where time is an issue.
 
