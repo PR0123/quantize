@@ -1,9 +1,10 @@
 ## How to spread incoming messages evenly, one every second, marking them with most recent timestamps, using Combine.
-It requires __buffering__ messages (as B) when necesery, and __ommiting__ timer ticks (as 4) in case there were no messages to consume, current or buffered.
+It requires __buffering__ messages (e.g. B) when necessary, and __omitting__ timer ticks (e.g. 4) in case there were no messages to consume, current or buffered.
 
 <img width="413" alt="shouldBe" src="https://user-images.githubusercontent.com/81814529/204915507-8e15d178-f9a3-4b1a-b2fa-ccb1dc7d2d08.png">
 
-[There is the code to ilustrate the problem](spreadEvenly.swift)
+I asked this question also on [the forum](https://developer.apple.com/forums/thread/721350).
+There is [the code](spreadEvenly.swift) to better ilustrate the problem.
 
 
 
