@@ -5,7 +5,7 @@ It requires __buffering__ messages (as B) when necesery, and __ommiting__ timer 
 
 [Demo](spreadEvenly.swift)
 
-I've found an amateur [implementation of withLatestFrom](https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3) operator allegedly absent from Combine. I believe it can and should be much simpler, and so [I tried](spreadEvenly.swift)
+
 
 ## My attempts:
 <img width="410" alt="zip" src="https://user-images.githubusercontent.com/81814529/204915666-1793c358-6fd8-4576-9c04-a849e90181ac.png">
@@ -21,5 +21,8 @@ Finally with ```collect(by time)``` messages will be spread evenly but in packet
 ## Is Combine is the right tool for time-sensitive jobs. If not, what would be an alternative?
 While [simulating](unevenBuckets.swift) countinuous input with asyncAfter, trying Combine's ```.collect``` introduced unexpected imprecisions observed as different number of elements in every "one second aggregate bucket".
 
-If I just should accept [existing proposition](https://serhiybutz.medium.com/combine-withlatestfrom-operator-8c529e809fd3), may I have [another question](https://developer.apple.com/forums/thread/721262) where time is an issue.
+## Is adapting withLatestFrom the right way?
+I've found an [implementation of withLatestFrom](https://github.com/serhiybutz/XCombine#withlatestfrom-operator) allegedly absent from Combine, but I am not sure if adapting it is the best idea. I also believe there must be a simpler way of implementing withLatestFrom. Is there? I albo [experimented](spreadEvenly.swift)
+
+If this is hopeless than I have [another question](https://developer.apple.com/forums/thread/721262) where time is an issue.
 
