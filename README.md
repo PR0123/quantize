@@ -3,7 +3,7 @@ It requires __buffering__ messages (as B) when necesery, and __ommiting__ timer 
 
 <img width="413" alt="shouldBe" src="https://user-images.githubusercontent.com/81814529/204915507-8e15d178-f9a3-4b1a-b2fa-ccb1dc7d2d08.png">
 
-[Demo](spreadEvenly.swift)
+[There is the code to ilustrate the problem](spreadEvenly.swift)
 
 
 
@@ -19,7 +19,7 @@ Filtering repeting messages is not an option, because some messages will be inte
 Finally with ```collect(by time)``` messages will be spread evenly but in packets, not one by one. So theoretically every element of a resulting array should be republished, which would add extra complexity.
 
 ## Is adapting withLatestFrom the right way?
-I've found an [implementation of withLatestFrom](https://github.com/serhiybutz/XCombine#withlatestfrom-operator) allegedly absent from Combine, but I am not sure if adapting it is the best idea. I also believe there must be a simpler way of implementing withLatestFrom. Is there? I albo [experimented](spreadEvenly.swift)
+I've found an [implementation of withLatestFrom](https://github.com/serhiybutz/XCombine#withlatestfrom-operator) allegedly absent from Combine, but I am not sure if adapting it is the best idea. I also believe there must be a simpler way of implementing withLatestFrom. Is there?
 
 ## Is Combine is the right tool for time-sensitive jobs. If not, what would be an alternative?
 While [simulating](unevenBuckets.swift) countinuous input with asyncAfter, trying Combine's ```.collect``` introduced unexpected imprecisions observed as different number of elements in every "one second aggregate bucket".
